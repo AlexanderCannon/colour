@@ -76,6 +76,9 @@
                 border-bottom: 14px solid transparent;
                 content: " ";
             }
+            .education{
+                background-color: #cccccc !important;
+            }
 
         .timeline > li > .timeline-badge {
             color: #fff;

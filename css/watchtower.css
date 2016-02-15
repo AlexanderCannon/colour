@@ -1,16 +1,29 @@
+.ball {
+    float:left;
+    background: red;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.carousel-inner {
+    height: 450px;
+}
 .qualifications {
     color: white;
 }
 .pool {
     /*background-color: #ffa64d;*/
     background: #ffffff;
-    position: absolute;
+    position: fixed;
     top: 0px;
     width: 100%;
     height: 100%;
     z-index: -500;
-    animation: peakCycle 15s normal infinite; 
-    -webkit-animation: peakCycle 15s normal infinite;
+    animation: peakCycle 60s normal infinite; 
+    -webkit-animation: peakCycle 60s normal infinite;
 }
 .second {
     /*background: #000;*/
@@ -31,6 +44,26 @@
     z-index: -499;
     
 }
+.path {
+    position: fixed;
+    width: 5px;
+    height:450px;
+    top: 100px;
+    left:65%;
+    padding: 0;
+    margin: 0;
+    z-index: -400;
+    -ms-transform: rotate(-40deg); /* IE 9 */
+    -webkit-transform: rotate(-40deg); /* Safari */
+    transform: rotate(-40deg);
+}
+#climber {
+    position: relative;
+    height: 10px;
+    width: 10px;
+    /*background-color: green;*/
+    top:100%;
+}
 .logo {
     left: 0;
     width: 100%;
@@ -38,8 +71,16 @@
     top: 25px;
     position: fixed;
     z-index: 500;
-    font-size: 8em;
+    font-size: 6em;
     color: #ffa64d;
+    opacity: 0;
+    -webkit-transition: opacity 0.25s linear;
+    -moz-transition: opacity 0.25s linear;
+    -o-transition: opacity 0.25s linear;
+    transition: opacity 0.25s linear;
+}
+.logo.in {
+    opacity: 1;
 }
 .canvas {
     width:225px;
@@ -103,7 +144,7 @@
 }
 .forestFront {
     position: absolute;
-    top: 0px;
+    top: 50px;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -116,7 +157,7 @@
 }
 .forestMid {
     position: absolute;
-    top: -50px;
+    top: 50px;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -133,7 +174,7 @@
 }
 .forestBack {
     position: absolute;
-    top: -70px;
+    top: 0px;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -145,17 +186,17 @@
 }
 .bgBack {
     position: absolute;
-    top: -250px;
+    top: -100px;
     width: 100%;
     padding: 0;
     margin: 0;
     z-index: 1300;
 }
 .bgBack path {
-    fill: #331a00;
+    /*fill: #331a00;*/
 }
 .main {
-    top: 910px;
+    top: 100%;
     left: 0%;
     width: 100%;
     height: 550px;

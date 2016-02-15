@@ -60,13 +60,19 @@
 }
 @keyframes peakCycle 
 {
-    90% {background-color: #333333}
-    70% {background-color:#ffa64d;}
-    30% {background-color:#ffffff;}
+    85% {background-color:#ffffff;}
+    75% {background-color:#ffa64d;}
+    50% {background-color: #333333}
+    25% {background-color: #4d0099}
+    15% {background-color:#ffa64d;}
+    0% {background-color:#ffffff;}
 } 
 @-webkit-keyframes peakCycle 
 {
-    90% {background-color: #333333}
-    70% {background-color:#ffa64d;}
-    30% {background-color:#ffffff;}
+    85% {background-color:#ffffff;}
+    75% {background-color:#ffa64d;}
+    50% {background-color: #333333}
+    25% {background-color: #4d0099}
+    15% {background-color:#ffa64d;}
+    0% {background-color:#ffffff;}
 }
