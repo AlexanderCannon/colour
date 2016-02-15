@@ -1,0 +1,199 @@
+.qualifications {
+    color: white;
+}
+.pool {
+    /*background-color: #ffa64d;*/
+    background: #ffffff;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -500;
+    animation: peakCycle 15s normal infinite; 
+    -webkit-animation: peakCycle 15s normal infinite;
+}
+.second {
+    /*background: #000;*/
+    position: absolute;
+    top: 2250px;
+    width: 100%;
+    height: auto;
+    z-index: 3500;
+/*    animation: peakCycle 15s normal infinite; 
+    -webkit-animation: peakCycle 15s normal infinite;*/
+}
+.peak {
+    position: fixed;
+    width: 100%;
+    top: -150px;
+    padding: 0;
+    margin: 0;
+    z-index: -499;
+    
+}
+.logo {
+    left: 0;
+    width: 100%;
+    margin-right: auto;
+    top: 25px;
+    position: fixed;
+    z-index: 500;
+    font-size: 8em;
+    color: #ffa64d;
+}
+.canvas {
+    width:225px;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+}
+.treelineFront {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    top: -40%;
+    left: 0;
+    position: inherit;
+}
+.sky {
+    top: -40px;
+    width: 104%;
+    height: 100%;
+    left:-2%;
+    padding: 0;
+    margin: 0;
+    background: lightblue;
+    position: absolute;
+    z-index: 100;
+    -ms-transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+    animation-name: homeCycle; 
+    animation-duration:15s; 
+    animation-direction:normal; 
+    animation-iteration-count:infinite; 
+    -webkit-animation-name: homeCycle; 
+    -webkit-animation-duration:15s; 
+    -webkit-animation-direction:normal; 
+    -webkit-animation-iteration-count:infinite;
+}
+.floor {
+/*    background:#003D14;
+    animation: floorCycle 15s normal infinite; 
+    -webkit-animation: floorCycle 15s normal infinite;*/
+    z-index: 1501;
+    width: 100%;
+    height: 400px;
+    left:0;
+    top: 640px;
+    padding: 0;
+    margin: 0;
+    position:relative;
+}
+.surrounding {
+    position: absolute;
+    top: -450px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 3000;
+}
+.forestFront {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 2500;
+}
+.forestFront path {
+    fill: #003D14;
+    animation: floorCycle 15s normal infinite; 
+    -webkit-animation: floorCycle 15s normal infinite;
+}
+.forestMid {
+    position: absolute;
+    top: -50px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 1450;
+}
+.forestMid path {
+    fill: #124007;
+}
+.tower {
+    top: -150px;
+    left: 60%;
+    z-index: 1425;
+    position: absolute;
+}
+.forestBack {
+    position: absolute;
+    top: -70px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 1400;
+}
+.forestBack path {
+    fill: #1A0000;
+    stroke: #fff;
+}
+.bgBack {
+    position: absolute;
+    top: -250px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 1300;
+}
+.bgBack path {
+    fill: #331a00;
+}
+.main {
+    top: 910px;
+    left: 0%;
+    width: 100%;
+    height: 550px;
+    z-index: 2000;
+    padding: 50px;
+    margin: 0;
+    position: absolute;
+    background: #000;
+/*    animation: floorCycle 15s normal infinite; 
+    -webkit-animation: floorCycle 15s normal infinite;*/
+    /*background: repeating-linear-gradient(to right, #003D14, #003D14 10px, #360000 30px, #360000 20px);*/
+}
+.towerColor {
+    animation: towerCycle 15s normal infinite; 
+    -webkit-animation: towerCycle 15s normal infinite;
+}
+.sunCircle {
+    background: yellow;
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    animation: sunCycle 15s normal infinite; 
+    -webkit-animation: sunCycle 15s normal infinite;
+    /*border: black solid 2px;*/
+}
+.sun {
+    position: fixed;
+    left: 50%;
+    top: 500px;
+    width: 11%;
+    height: 11%;
+    z-index: 500;
+    -webkit-animation: sunPath 15s linear infinite;
+    -moz-animation: sunPath 15s linear infinite;
+    -o-animation: sunPath 15s linear infinite;
+    animation: sunPath 15s linear infinite;
+}
+body {
+    padding: 0;
+    margin: 0;
+}

@@ -1,0 +1,72 @@
+@keyframes homeCycle 
+{
+    70% {background-color:lightblue;}
+    30% {background-color:#00006a;}
+} 
+@-webkit-keyframes homeCycle 
+{ 
+    70% {background-color:lightblue;}
+    30% {background-color:#00006a;}
+}
+@keyframes floorCycle 
+{
+    70% {background-color:#003D14;}
+    30% {background-color:#051405;}
+    70% {fill:#003D14}
+    30% {fill:#051405;}
+} 
+@-webkit-keyframes floorCycle 
+{ 
+    70% {background-color:#003D14;}
+    30% {background-color:#051405;}
+    70% {fill:#003D14}
+    30% {fill:#051405;}
+}
+@keyframes sunCycle 
+{
+    80% {background-color:yellow;}
+    40% {background-color:orange;}
+} 
+@-webkit-keyframes sunCycle 
+{ 
+    80% {background-color:yellow;}
+    30% {background-color:orange;}
+}
+@keyframes towerCycle 
+{
+    70% {background-color:#993333;}
+    30% {background-color:#2E0000;}
+} 
+@-webkit-keyframes towerCycle 
+{ 
+    70% {background-color:#993333;}
+    30% {background-color:greenyellow;}
+}
+@-webkit-keyframes sunPath {
+    from { -webkit-transform: rotate(0deg) translateX(270%) rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) translateX(270%) rotate(-360deg); }
+}
+@-moz-keyframes sunPath {
+    from { -moz-transform: rotate(0deg) translateX(270%) rotate(0deg); }
+    to   { -moz-transform: rotate(360deg) translateX(270%) rotate(-360deg); }
+}
+@-o-keyframes sunPath {
+    from { -o-transform: rotate(0deg) translateX(270%) rotate(0deg); }
+    to   { -o-transform: rotate(360deg) translateX(270%) rotate(-360deg); }
+}
+@keyframes sunPath {
+    from { transform: rotate(0deg) translateX(270%) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(270%) rotate(-360deg); }
+}
+@keyframes peakCycle 
+{
+    90% {background-color: #333333}
+    70% {background-color:#ffa64d;}
+    30% {background-color:#ffffff;}
+} 
+@-webkit-keyframes peakCycle 
+{
+    90% {background-color: #333333}
+    70% {background-color:#ffa64d;}
+    30% {background-color:#ffffff;}
+}
