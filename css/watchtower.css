@@ -31,7 +31,7 @@
     top: 2250px;
     width: 100%;
     height: auto;
-    z-index: 3500;
+    /*z-index: 3500;*/
 /*    animation: peakCycle 15s normal infinite; 
     -webkit-animation: peakCycle 15s normal infinite;*/
 }
@@ -48,14 +48,14 @@
     position: fixed;
     width: 5px;
     height:450px;
-    top: 100px;
-    left:65%;
+    top: 50px;
+    left: 33%;
     padding: 0;
     margin: 0;
     z-index: -400;
-    -ms-transform: rotate(-40deg); /* IE 9 */
-    -webkit-transform: rotate(-40deg); /* Safari */
-    transform: rotate(-40deg);
+    -ms-transform: rotate(40deg); /* IE 9 */
+    -webkit-transform: rotate(40deg); /* Safari */
+    transform: rotate(40deg);
 }
 #climber {
     position: relative;
@@ -63,6 +63,9 @@
     width: 10px;
     /*background-color: green;*/
     top:100%;
+    -ms-transform: rotate(-80deg);
+    -webkit-transform: rotate(-80deg);
+    transform: rotate(-80deg)
 }
 .logo {
     left: 0;
@@ -208,6 +211,15 @@
 /*    animation: floorCycle 15s normal infinite; 
     -webkit-animation: floorCycle 15s normal infinite;*/
     /*background: repeating-linear-gradient(to right, #003D14, #003D14 10px, #360000 30px, #360000 20px);*/
+}
+.bottom-of-main {
+    bottom: 25px;
+    height: 25px;
+    left: 0;
+    width: 100%;
+    position: inherit;
+    padding: 0;
+    margin: 0;
 }
 .towerColor {
     animation: towerCycle 15s normal infinite; 

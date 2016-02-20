@@ -21,15 +21,11 @@ $(document).on('ready', function() {
 
     $(document).on('scroll', function(){
         value = $(window).scrollTop();
+        console.log(value);
         percent = Math.round(value/docHeight*100);
-//        console.log(percent);
-        if (percent > 38) {
-            $('.logo').removeClass('in');
-        }else if (percent <38) {
-            $('.logo').addClass('in');
-        }
-        console.log(100-percent);
-        $("#climber").stop().animate({"top": 80-percent + "%"}, "slow");
+        hideTitle(value, percent);
+        stickyRelocate(value);
+        pickTab(value);
     });
     $(window).on('resize', throttle(function() {
         winHeight = $(window).height(),
@@ -58,4 +54,53 @@ function throttle(fn, threshhold, scope) {
             fn.apply(context, args);
         }
     };
+}
+
+function hideTitle(height, percent) {
+//        console.log(percent);
+    if (height > 2150) {
+        $('.logo').removeClass('in');
+    }else if (height <2105) {
+        $('.logo').addClass('in');
+    }
+//    console.log(100-percent);
+    $("#climber").stop().animate({"top": 80-percent + "%"}, "slow");
+}
+function stickyRelocate(height) {
+    var window_top = $(window).scrollTop();
+    var div_top = $('#social-buttons').offset().top;
+    if (height > 1260) {
+        $('#social-buttons').addClass('stick');
+//        $('#social-buttons').width('45px');
+    } else {
+        $('#social-buttons').removeClass('stick');
+//        $('#social-buttons').width('100%');
+    }
+}
+function pickTab(height) {
+    if (height > 590 && height < 650) {
+        $('#skills-toggle').addClass("active");
+        $('#about-toggle').removeClass("active");
+        $('#interests-toggle').removeClass("active");
+        $('#skills').addClass("in");
+        $('#skills').addClass("active");
+        $('#about').removeClass("active");
+        $('#about').removeClass("active");
+        $('#interests').removeClass("in");
+        $('#interests').removeClass("in");
+    } else if (height > 650) {
+        $('#interests-toggle').addClass("active");
+        $('#skills-toggle').removeClass("active");
+        $('#interests').addClass("in");
+        $('#interests').addClass("active");
+        $('#skills').removeClass("active");
+        $('#skills').removeClass("in");
+    } else {
+        $('#about-toggle').addClass("active");
+        $('#skills-toggle').removeClass("active");
+        $('#about').addClass("in");
+        $('#about').addClass("active");
+        $('#skills').removeClass("active");
+        $('#skill').removeClass("in");
+    }
 }

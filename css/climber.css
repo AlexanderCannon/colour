@@ -1,0 +1,259 @@
+.avatar {
+  -webkit-animation: walk 0.25s infinite alternate-reverse ease-in-out;
+          animation: walk 0.25s infinite alternate-reverse ease-in-out;
+  display: inline-block;
+  -webkit-filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+          filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+}
+.avatar-head {
+  width: 2em;
+  height: 2em;
+  background: -webkit-radial-gradient(#e8d8c3, #d2b48c);
+  background: radial-gradient(#e8d8c3, #d2b48c);
+  border-radius: 1em;
+  left: -0.2em;
+  z-index: 3;
+  position: relative;
+}
+.avatar-torso {
+  position: relative;
+  height: 1.5em;
+  width: 1em;
+  background: #f00;
+  border-radius: 1em 1em 0 0;
+}
+.avatar-torso-arms {
+  position: relative;
+}
+.avatar-torso-arms-arm-left {
+  position: relative;
+  z-index: -1;
+}
+.avatar-legs {
+  position: relative;
+  z-index: -1;
+  margin-top: -0.5em;
+}
+.arm {
+  font-size: 0.9em;
+  position: relative;
+  width: 1em;
+  -webkit-transform-origin: 50% 0.5em;
+          transform-origin: 50% 0.5em;
+  position: absolute;
+}
+.arm.left {
+  -webkit-animation: arm 0.25s infinite alternate ease-in-out;
+          animation: arm 0.25s infinite alternate ease-in-out;
+}
+.arm.left .arm-fore {
+  -webkit-animation: arm-fore 0.25s infinite alternate ease-in-out;
+          animation: arm-fore 0.25s infinite alternate ease-in-out;
+}
+.arm.right {
+  -webkit-filter: drop-shadow(0 0 3px #000);
+          filter: drop-shadow(0 0 3px #000);
+  -webkit-animation: arm 0.25s infinite alternate-reverse ease-in-out;
+          animation: arm 0.25s infinite alternate-reverse ease-in-out;
+}
+.arm.right .arm-fore {
+  background: #f33;
+  -webkit-animation: arm-fore 0.25s infinite alternate-reverse ease-in-out;
+          animation: arm-fore 0.25s infinite alternate-reverse ease-in-out;
+}
+.arm.right .arm-upper {
+  background: #f33;
+}
+.arm-upper {
+  height: 1.5em;
+  background: #c00;
+  border-radius: 1em;
+}
+.arm-fore {
+  background: #c00;
+  height: 1.5em;
+  -webkit-animation-duration: inherit;
+          animation-duration: inherit;
+  -webkit-transform-origin: 50% 0.5em;
+          transform-origin: 50% 0.5em;
+  position: relative;
+  top: -1em;
+  border-radius: 1em;
+}
+.hand {
+  width: 1em;
+  height: 0.5em;
+  background: #d2b48c;
+  position: absolute;
+  bottom: 0;
+  border-radius: 0 0 1em 1em;
+}
+.leg {
+  position: relative;
+  width: 1em;
+  -webkit-transform-origin: 50% 0.5em;
+          transform-origin: 50% 0.5em;
+}
+.leg.left {
+  position: absolute;
+  -webkit-animation: leg 0.25s infinite alternate-reverse ease-in-out;
+          animation: leg 0.25s infinite alternate-reverse ease-in-out;
+}
+.leg.left .leg-shin {
+  -webkit-animation: shin 0.25s infinite alternate-reverse ease-in-out;
+          animation: shin 0.25s infinite alternate-reverse ease-in-out;
+}
+.leg.right {
+  -webkit-filter: drop-shadow(0 0 3px #000);
+          filter: drop-shadow(0 0 3px #000);
+  -webkit-animation: leg 0.25s infinite alternate ease-in-out;
+          animation: leg 0.25s infinite alternate ease-in-out;
+}
+.leg.right .leg-shin {
+  background: #4d4d4d;
+  -webkit-animation: shin 0.25s infinite alternate ease-in-out;
+          animation: shin 0.25s infinite alternate ease-in-out;
+}
+.leg.right .leg-thigh {
+  background: #4d4d4d;
+}
+.leg-shin {
+  background: #333;
+  height: 1.5em;
+  -webkit-animation-duration: inherit;
+          animation-duration: inherit;
+  -webkit-transform-origin: 50% 0.5em;
+          transform-origin: 50% 0.5em;
+  position: relative;
+  margin-top: -1em;
+  border-radius: 1em;
+}
+.leg-thigh {
+  height: 1.5em;
+  background: #333;
+  border-radius: 1em;
+}
+@-webkit-keyframes walk {
+  0% {
+    -webkit-transform: translateY(0.15em) rotate(2deg);
+            transform: translateY(0.15em) rotate(2deg);
+  }
+  45% {
+    -webkit-transform: translateY(0) rotate(-3deg);
+            transform: translateY(0) rotate(-3deg);
+  }
+  100% {
+    -webkit-transform: translateY(0.15em) rotate(2deg);
+            transform: translateY(0.15em) rotate(2deg);
+  }
+}
+@keyframes walk {
+  0% {
+    -webkit-transform: translateY(0.15em) rotate(2deg);
+            transform: translateY(0.15em) rotate(2deg);
+  }
+  45% {
+    -webkit-transform: translateY(0) rotate(-3deg);
+            transform: translateY(0) rotate(-3deg);
+  }
+  100% {
+    -webkit-transform: translateY(0.15em) rotate(2deg);
+            transform: translateY(0.15em) rotate(2deg);
+  }
+}
+@-webkit-keyframes leg {
+  0% {
+    -webkit-transform: rotate(-35deg);
+            transform: rotate(-35deg);
+  }
+  45% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+}
+@keyframes leg {
+  0% {
+    -webkit-transform: rotate(-35deg);
+            transform: rotate(-35deg);
+  }
+  45% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+}
+@-webkit-keyframes shin {
+  from {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  to {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+}
+@keyframes shin {
+  from {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  to {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+}
+@-webkit-keyframes arm {
+  0% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  45% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+}
+@keyframes arm {
+  0% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  45% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+}
+@-webkit-keyframes arm-fore {
+  from {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  to {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+}
+@keyframes arm-fore {
+  from {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  to {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+}
