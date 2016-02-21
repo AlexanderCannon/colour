@@ -1,18 +1,47 @@
 .ball {
     float:left;
-    background: red;
     width: 200px;
     height: 200px;
     border-radius: 100%;
     display: table-cell;
     vertical-align: middle;
+    /*padding-top: 15px;*/
+/*    background-image:
+        linear-gradient(
+        to right, 
+        red, 
+        #f06d06, 
+        rgb(255, 255, 0), 
+        green
+    );*/
+    /*box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5), 1px 1px 2px rgba(0, 0, 0, 0.3);*/
+    padding: 30px;
 }
-
+.img-helper {
+    display: table;
+    margin: 0 auto;
+    vertical-align: middle;
+    padding: 0;
+}
+.img-watch {
+    padding-left: 35px;
+}
+.move-middle {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    vertical-align: middle;
+}
+.social-container {
+    width: 33%
+}
 .carousel-inner {
     height: 450px;
 }
 .qualifications {
     color: white;
+    padding-top: 50px;
 }
 .pool {
     /*background-color: #ffa64d;*/
@@ -22,18 +51,18 @@
     width: 100%;
     height: 100%;
     z-index: -500;
-    animation: peakCycle 60s normal infinite; 
-    -webkit-animation: peakCycle 60s normal infinite;
+    animation: peakCycle 120s normal infinite; 
+    -webkit-animation: peakCycle 120s normal infinite;
 }
 .second {
-    /*background: #000;*/
+    /*background: #201D1E;*/
     position: absolute;
     top: 2250px;
     width: 100%;
     height: auto;
     /*z-index: 3500;*/
-/*    animation: peakCycle 15s normal infinite; 
-    -webkit-animation: peakCycle 15s normal infinite;*/
+/*    animation: peakCycle 120s normal infinite; 
+    -webkit-animation: peakCycle 120s normal infinite;*/
 }
 .peak {
     position: fixed;
@@ -67,6 +96,30 @@
     -webkit-transform: rotate(-80deg);
     transform: rotate(-80deg)
 }
+.climber-origin {
+    top: 370px;
+    left: 22%;
+    position: fixed;
+    z-index: 10000;
+    opacity: 0;
+    -webkit-transition: opacity 0.25s linear;
+    -moz-transition: opacity 0.25s linear;
+    -o-transition: opacity 0.25s linear;
+    transition: opacity 0.25s linear;
+}
+.climber-origin.in{
+    opacity: 1;
+}
+.holding {
+     opacity: 0;
+    -webkit-transition: opacity 0.25s linear;
+    -moz-transition: opacity 0.25s linear;
+    -o-transition: opacity 0.25s linear;
+    transition: opacity 0.25s linear;
+}
+.holding.in{
+    opacity: 1;
+}
 .logo {
     left: 0;
     width: 100%;
@@ -75,7 +128,6 @@
     position: fixed;
     z-index: 500;
     font-size: 6em;
-    color: #ffa64d;
     opacity: 0;
     -webkit-transition: opacity 0.25s linear;
     -moz-transition: opacity 0.25s linear;
@@ -101,32 +153,11 @@
     left: 0;
     position: inherit;
 }
-.sky {
-    top: -40px;
-    width: 104%;
-    height: 100%;
-    left:-2%;
-    padding: 0;
-    margin: 0;
-    background: lightblue;
-    position: absolute;
-    z-index: 100;
-    -ms-transform: rotate(-2deg);
-    -webkit-transform: rotate(-2deg);
-    transform: rotate(-2deg);
-    animation-name: homeCycle; 
-    animation-duration:15s; 
-    animation-direction:normal; 
-    animation-iteration-count:infinite; 
-    -webkit-animation-name: homeCycle; 
-    -webkit-animation-duration:15s; 
-    -webkit-animation-direction:normal; 
-    -webkit-animation-iteration-count:infinite;
-}
+
 .floor {
 /*    background:#003D14;
-    animation: floorCycle 15s normal infinite; 
-    -webkit-animation: floorCycle 15s normal infinite;*/
+    animation: floorCycle 120s normal infinite; 
+    -webkit-animation: floorCycle 120s normal infinite;*/
     z-index: 1501;
     width: 100%;
     height: 400px;
@@ -147,7 +178,7 @@
 }
 .forestFront {
     position: absolute;
-    top: 50px;
+    top: -50px;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -155,12 +186,12 @@
 }
 .forestFront path {
     fill: #003D14;
-    animation: floorCycle 15s normal infinite; 
-    -webkit-animation: floorCycle 15s normal infinite;
+    animation: floorCycle 120s normal infinite; 
+    -webkit-animation: floorCycle 120s normal infinite;
 }
 .forestMid {
     position: absolute;
-    top: 50px;
+    top: -90px;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -170,14 +201,14 @@
     fill: #124007;
 }
 .tower {
-    top: -150px;
-    left: 60%;
+    top: -350px;
+    left: 70%;
     z-index: 1425;
     position: absolute;
 }
 .forestBack {
     position: absolute;
-    top: 0px;
+    top: -100px;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -189,7 +220,7 @@
 }
 .bgBack {
     position: absolute;
-    top: -100px;
+    top: -320px;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -202,14 +233,14 @@
     top: 100%;
     left: 0%;
     width: 100%;
-    height: 550px;
+    height: 750px;
     z-index: 2000;
     padding: 50px;
     margin: 0;
     position: absolute;
-    background: #000;
-/*    animation: floorCycle 15s normal infinite; 
-    -webkit-animation: floorCycle 15s normal infinite;*/
+    background: #201D1E;
+/*    animation: floorCycle 120s normal infinite; 
+    -webkit-animation: floorCycle 120s normal infinite;*/
     /*background: repeating-linear-gradient(to right, #003D14, #003D14 10px, #360000 30px, #360000 20px);*/
 }
 .bottom-of-main {
@@ -220,31 +251,6 @@
     position: inherit;
     padding: 0;
     margin: 0;
-}
-.towerColor {
-    animation: towerCycle 15s normal infinite; 
-    -webkit-animation: towerCycle 15s normal infinite;
-}
-.sunCircle {
-    background: yellow;
-    border-radius: 100%;
-    width: 150px;
-    height: 150px;
-    animation: sunCycle 15s normal infinite; 
-    -webkit-animation: sunCycle 15s normal infinite;
-    /*border: black solid 2px;*/
-}
-.sun {
-    position: fixed;
-    left: 50%;
-    top: 500px;
-    width: 11%;
-    height: 11%;
-    z-index: 500;
-    -webkit-animation: sunPath 15s linear infinite;
-    -moz-animation: sunPath 15s linear infinite;
-    -o-animation: sunPath 15s linear infinite;
-    animation: sunPath 15s linear infinite;
 }
 body {
     padding: 0;

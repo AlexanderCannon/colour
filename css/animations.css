@@ -1,109 +1,45 @@
-@keyframes homeCycle 
-{
-    70% {background-color:lightblue;}
-    30% {background-color: #00006a;}
-} 
-@-webkit-keyframes homeCycle 
-{ 
-    70% {background-color:lightblue;}
-    30% {background-color: #00006a;}
-}
-@keyframes floorCycle 
-{
-    70% {background-color: #003D14;}
-    30% {background-color: #051405;}
-    70% {fill: #003D14}
-    30% {fill: #051405;}
-} 
-@-webkit-keyframes floorCycle 
-{ 
-    70% {background-color: #003D14;}
-    30% {background-color: #051405;}
-    70% {fill: #003D14}
-    30% {fill: #051405;}
-}
-@keyframes sunCycle 
-{
-    80% {background-color:yellow;}
-    40% {background-color:orange;}
-} 
-@-webkit-keyframes sunCycle 
-{ 
-    80% {background-color:yellow;}
-    30% {background-color:orange;}
-}
-@keyframes towerCycle 
-{
-    70% {background-color: #993333;}
-    30% {background-color: #2E0000;}
-} 
-@-webkit-keyframes towerCycle 
-{ 
-    70% {background-color: #993333;}
-    30% {background-color:greenyellow;}
-}
-@-webkit-keyframes sunPath {
-    from { -webkit-transform: rotate(0deg) translateX(270%) rotate(0deg); }
-    to   { -webkit-transform: rotate(360deg) translateX(270%) rotate(-360deg); }
-}
-@-moz-keyframes sunPath {
-    from { -moz-transform: rotate(0deg) translateX(270%) rotate(0deg); }
-    to   { -moz-transform: rotate(360deg) translateX(270%) rotate(-360deg); }
-}
-@-o-keyframes sunPath {
-    from { -o-transform: rotate(0deg) translateX(270%) rotate(0deg); }
-    to   { -o-transform: rotate(360deg) translateX(270%) rotate(-360deg); }
-}
-@keyframes sunPath {
-    from { transform: rotate(0deg) translateX(270%) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(270%) rotate(-360deg); }
-}
 @keyframes peakCycle 
 {
     85% {background-color: #ffffff;}
-    75% {background-color: #ffa64d;}
-    50% {background-color: #333333}
-    25% {background-color: #4d0099}
-    15% {background-color: #ffa64d;}
-    0% {background-color: #ffffff;}
+    50% {background-color: #000}
+    0% {background-color: #f9f9f9;}
 } 
 @-webkit-keyframes peakCycle 
 {
     85% {background-color: #ffffff;}
-    75% {background-color: #ffa64d;}
-    50% {background-color: #333333}
-    25% {background-color: #4d0099}
-    15% {background-color: #ffa64d;}
-    0% {background-color: #ffffff;}
+    50% {background-color: #000}
+    0% {background-color: #f9f9f9;}
 }
 
 @keyframes textCycle 
 {
-    /*0% {color: #ffffff;}*/
-    85% {color: #ffa64d;}
-    75% {color: #333333}
-    50% {color: #4d0099}
-    25% {color: #ffa64d;}
-    15% {color: #ffffff;}
+    50% {color: #003D14;}
 } 
 @-webkit-keyframes textCycle 
 {
-/*    0% {color: #ffffff;}*/
-    85% {color: #ffa64d;}
-    75% {color: #333333}
-    50% {color: #4d0099}
-    25% {color: #ffa64d;}
-    15% {color: #ffffff;}
+    50% {color: #003D14;}
 }
 #social-buttons.stick {
     position: fixed;
     bottom: 0px;
     height: 55px;
     z-index: 100000;
-    background: black;
+    background: #201D1E;
     /*width:45px;*/
 }
 .colour-change-text {
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
     animation: textCycle 15s normal infinite; 
     -webkit-animation: textCycle 15s normal infinite;
+}
+.fullscreen {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    padding: 0;
+    margin :0;
+    position: absolute;
+}
+.fixed-box {
+    position: fixed;
 }
