@@ -26,6 +26,9 @@
 .img-watch {
     padding-left: 35px;
 }
+.img-games {
+    top: 15px;
+}
 .move-middle {
     width: auto;
     height: auto;
@@ -230,7 +233,7 @@
     /*fill: #331a00;*/
 }
 .main {
-    top: 100%;
+    top: 730px;
     left: 0%;
     width: 100%;
     height: 750px;

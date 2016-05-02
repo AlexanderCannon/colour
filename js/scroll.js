@@ -80,7 +80,7 @@ function stickyRelocate(height) {
     }
 }
 function pickTab(height) {
-    if (height > 620 && height < 690) {
+    if (height > 620 && height < 729) {
         $('#skills-toggle').addClass("active");
         $('#about-toggle').removeClass("active");
         $('#interests-toggle').removeClass("active");
@@ -90,7 +90,7 @@ function pickTab(height) {
         $('#about').removeClass("active");
         $('#interests').removeClass("in");
         $('#interests').removeClass("in");
-    } else if (height > 690) {
+    } else if (height > 730) {
         $('#interests-toggle').addClass("active");
         $('#skills-toggle').removeClass("active");
         $('#interests').addClass("in");
@@ -113,7 +113,7 @@ function pickTab(height) {
     }
 }
 function makeFullscreen(height) {
-    if (height > 540 && height < 740) {
+    if (height > 540 && height < 810) {
         $('#mainBox').addClass('fullscreen');
         $('#mainBox').addClass('fixed-box');
     } else {
